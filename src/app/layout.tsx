@@ -2,7 +2,6 @@ import type {Metadata} from "next";
 import "./globals.css";
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar"
 import {AppSidebar} from "@/components/app-sidebar"
-import { Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: "Create Next App",
