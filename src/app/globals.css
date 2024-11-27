@@ -101,10 +101,14 @@ li, p {
   object-fit: cover;
 }
 
-.primary-text {
+.primary-title {
   @apply text-[80px] lg:text-[100px] font-primary font-semibold leading-[80px] lg:leading-[120px];
 }
 
+.primary-text {
+  @apply font-primary font-semibold;
+}
+
 .secondary-text {
-  @apply font-secondary font-light text-xs;
+  @apply font-secondary font-light text-[16px] leading-7;
 }

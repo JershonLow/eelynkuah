@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={"bg-secondary"}>
           <SidebarProvider>
               <main>
-                  <div className="flex w-[100vw] justify-between fixed bg-white drop-shadow-md">
+                  <div className="flex w-[100vw] justify-between fixed bg-white drop-shadow-md z-40">
                       <div className="flex flex-row gap-2 p-3 pl-5 sm:pl-10 pt-4 align-bottom">
                           <svg className="fill-circle_1 pt-1" data-bbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
                                width="27"
