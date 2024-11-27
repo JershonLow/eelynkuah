@@ -112,3 +112,7 @@ li, p {
 .secondary-text {
   @apply font-secondary font-light text-[16px] leading-7;
 }
+
+.transition-temp-1 {
+  @apply transition-all duration-1000 ease-in-out;
+}
