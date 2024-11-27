@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import {useEffect, useState} from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
     const [visible, setVisible] = useState(false);
@@ -16,7 +17,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className={"pt-32 h-[100vh] z-0"}>
+        <div className={"pt-32 min-h-screen z-0"}>
             {/*Desktop version*/}
             <div className={`hidden sm:flex justify-center flex-row transition-temp-1 w-[100vw]
             ${visible ? "opacity-100" : "opacity-0"}
@@ -43,10 +44,34 @@ export default function Home() {
                             far,
                             and feel free to reach out if you&#39;d like to connect. Thank you for your time! </p>
                     </div>
+                    <div className={"w-full flex justify-end gap-5 pr-8 pt-12"}>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8}}
+                        >
+                            <p className="flex fill-circle_1 circle-image border border-black bg-colour-1 size-36 primary-text text-[22px] justify-center items-center">resume</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.25}}
+                        >
+                            <p className="flex fill-circle_1 circle-image border border-black bg-colour-2 size-36 primary-text text-[22px] justify-center items-center">projects</p>
+                        </motion.div>
+                        <motion.div
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.8, delay: 0.5}}
+                        >
+                            <p className="flex fill-circle_1 circle-image border border-black bg-colour-3 size-36 primary-text text-[22px] justify-center items-center">contact
+                                me!</p>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
             {/*Mobile version*/}
-            <div className={`flex flex-col sm:hidden items-center justify-center transition-temp-1
+            <div className={`flex flex-col sm:hidden items-center justify-center transition-temp-1 w-[100vw]
                 ${visible ? "opacity-100" : "opacity-0"}
                 ${transform ? "translate-y-0" : "translate-y-8"}
                 `}>
@@ -71,6 +96,30 @@ export default function Home() {
                     expecting to learn and grow in my skills and become a contributing member of the
                     organisation. Do to take a look at my portfolio to see some of the work I&#39;ve done so far,
                     and feel free to reach out if you&#39;d like to connect. Thank you for your time! </p>
+            <div className={"w-full flex justify-end gap-5 pr-[8vw] pt-12"}>
+                <motion.div
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8}}
+                >
+                    <p className="flex fill-circle_1 circle-image border border-black bg-colour-1 size-[25vw] primary-text text-[4vw] justify-center items-center">resume</p>
+                </motion.div>
+                <motion.div
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, delay: 0.25}}
+                >
+                    <p className="flex fill-circle_1 circle-image border border-black bg-colour-2 size-[25vw] primary-text text-[4vw] justify-center items-center">projects</p>
+                </motion.div>
+                <motion.div
+                    initial={{opacity: 0, y: 50}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, delay: 0.5}}
+                >
+                    <p className="flex fill-circle_1 circle-image border border-black bg-colour-3 size-[25vw] primary-text text-[4vw] justify-center items-center">contact
+                        me!</p>
+                </motion.div>
+            </div>
             </div>
         </div>
     );

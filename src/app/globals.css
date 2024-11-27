@@ -7,6 +7,8 @@
 
 :root {
   --fill_1: #EEA302;
+  --fill_2: #ff3b25;
+  --fill_3: #80d8da;
 }
 
 @layer base {
@@ -99,6 +101,18 @@ li, p {
 .circle-image {
   border-radius: 50%;
   object-fit: cover;
+}
+
+.bg-colour-1 {
+  background-color: var(--fill_1);
+}
+
+.bg-colour-2 {
+ background-color: var(--fill_2);
+}
+
+.bg-colour-3 {
+background-color: var(--fill_3);
 }
 
 .primary-title {
