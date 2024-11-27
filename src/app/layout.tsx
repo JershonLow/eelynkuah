@@ -60,7 +60,6 @@ export default function RootLayout({
                         </div>
                         <div>
                             <p className={"primary-text"}>Follow Me</p>
-                            <Linkedin/>
                         </div>
                     </div>
                 </div>
