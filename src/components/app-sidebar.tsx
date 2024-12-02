@@ -5,9 +5,9 @@ export function AppSidebar() {
         <Sidebar>
             <SidebarContent>
                 <ul className={"pl-5 pt-5"}>
-                    <li className={"py-2"}>resume</li>
-                    <li className={"py-2"}>projects</li>
-                    <li className={"py-2"}>find me here</li>
+                    <li className={"py-2 list-none"}>resume</li>
+                    <li className={"py-2 list-none"}>projects</li>
+                    <li className={"py-2 list-none"}>find me here</li>
                 </ul>
             </SidebarContent>
         </Sidebar>

@@ -92,10 +92,19 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 li, p {
   font-family: Figtree, sans-serif;
   font-weight: 300;
+}
+
+li {
+  list-style-type: disc;
+  padding-left: 3px;
 }
 
 .circle-image {

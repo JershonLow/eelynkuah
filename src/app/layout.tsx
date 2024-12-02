@@ -16,54 +16,56 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={"bg-secondary"}>
-        <SidebarProvider>
-            <main>
-                <div className="flex w-[100vw] justify-between fixed bg-white drop-shadow-md z-40">
-                    <div className="flex flex-row gap-2 p-3 pl-5 sm:pl-10 pt-4 align-bottom">
-                        <svg className="fill-circle_1 pt-1" data-bbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-                             width="27"
-                             height="27"
-                             viewBox="0 0 200 200" role="img" aria-label="Homepage">
-                            <path
-                                d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z"></path>
-                        </svg>
-                        <p className={"font-primary font-semibold text-title"}>Ee Lyn</p>
-                        <p className={"font-light pt-[9px] pl-3 sm:pl-5 text-sm"}>creative</p>
-                    </div>
-                    {/*Desktop*/}
-                    <div className={"flex-row gap-4 items-center md:pr-6 hidden sm:flex"}>
-                        <ul className={"flex list-none h-[24px] font-secondary font-light text-sm pt-1.5"}>
-                            <li className={"px-8"}>resume</li>
-                            <li className={"border-r border-l border-black px-8"}>projects</li>
-                            <li className={"px-8"}>find me here</li>
-                        </ul>
-                    </div>
-                    {/*Mobile*/}
-                    <div className={"flex sm:hidden items-center"}>
+        <main>
+            <div className="flex w-[100vw] justify-between fixed bg-white drop-shadow-md z-30 scroll-smooth h-14">
+                <div className="flex flex-row gap-2 p-3 pl-5 sm:pl-10 pt-4 align-bottom">
+                    <svg className="fill-circle_1 pt-1" data-bbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                         width="27"
+                         height="27"
+                         viewBox="0 0 200 200" role="img" aria-label="Homepage">
+                        <path
+                            d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z"></path>
+                    </svg>
+                    <p className={"font-primary font-semibold text-title"}>Ee Lyn</p>
+                    <p className={"font-light pt-[9px] pl-3 sm:pl-5 text-sm"}>creative</p>
+
+                </div>
+                {/*Desktop*/}
+                <div className={"flex-row gap-4 items-center md:pr-6 hidden sm:flex"}>
+                    <ul className={"flex list-none h-[24px] font-secondary font-light text-sm pt-1.5"}>
+                        <li className={"list-none px-8"}>resume</li>
+                        <li className={"list-none border-r border-l border-black px-8"}>projects</li>
+                        <li className={"list-none px-8"}>find me here</li>
+                    </ul>
+                </div>
+                {/*Mobile*/}
+                <div className={"flex sm:hidden z-40"}>
+                    <SidebarProvider>
                         <AppSidebar/>
-                        <div className={"pr-5 pt-2"}><SidebarTrigger/></div>
+                        <div className={"pr-7 pt-5 z-40"}><SidebarTrigger/></div>
+                    </SidebarProvider>
+                </div>
+            </div>
+            {children}
+            {/*Footer*/}
+            <div className={"flex flex-col justify-center items-center pb-[5vh]"}>
+                <div className={"w-[90vw] h-[1px] my-10 bg-gray-300"}></div>
+                <div className={"w-[90vw] flex flex-col sm:flex-row justify-between"}>
+                    <div>
+                        <p className={"primary-text"}>Phone</p>
+                        <p className={"secondary-text"}>012-653 2409</p>
+                    </div>
+                    <div>
+                        <p className={"primary-text"}>Email</p>
+                        <p className={"secondary-text"}>eelynkuah.work@gmail.com</p>
+                    </div>
+                    <div>
+                        <p className={"primary-text"}>Follow Me</p>
                     </div>
                 </div>
-                {children}
-                {/*Footer*/}
-                <div className={"flex flex-col justify-center items-center pb-[5vh]"}>
-                    <div className={"w-[90vw] h-[1px] my-10 bg-gray-300"}></div>
-                    <div className={"w-[90vw] flex flex-col sm:flex-row justify-between"}>
-                        <div>
-                            <p className={"primary-text"}>Phone</p>
-                            <p className={"secondary-text"}>012-653 2409</p>
-                        </div>
-                        <div>
-                            <p className={"primary-text"}>Email</p>
-                            <p className={"secondary-text"}>eelynkuah.work@gmail.com</p>
-                        </div>
-                        <div>
-                            <p className={"primary-text"}>Follow Me</p>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </SidebarProvider>
+            </div>
+        </main>
+
         </body>
         </html>
     );
